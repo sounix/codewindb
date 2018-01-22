@@ -22,17 +22,21 @@ async function run () {
 //   console.log(`${chalk.green('[codewincaja-db:Proveedores]')}`)
 //   console.log(proveedores)
 
-  const proveedor = await Bitacora.findByCuentaProveedores('2110A0003700000000003').catch(handleFatalError)
-  console.log(`${chalk.green('[codewincaja-db:Proveedor]')}`)
-  console.log(proveedor)
+  // const proveedor = await Bitacora.findByCuentaProveedores('2110A0003700000000003').catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:Proveedor]')}`)
+  // console.log(proveedor)
 
 //   const nombres = await Bitacora.findByNombreProveedores('comercializadora mac ').catch(handleFatalError)
 //   console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
 //   console.log(nombres)
 
-//   const nombres = await Bitacora.insertProveedor('2110C0007500000000003', '', '', '', '', '', '').catch(handleFatalError)
-//   console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
-//   console.log(nombres)
+  // const nombres = await Bitacora.insertProveedor('2110C0007500000000003', '', '', '', '', '', '').catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
+  // console.log(nombres)
+
+  const nombres = await Bitacora.deleteProveedor('2110C0007500000000003').catch(handleFatalError)
+  console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
+  console.log(nombres)
 
   process.exit(0)
 }
