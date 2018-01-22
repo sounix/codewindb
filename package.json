@@ -1,0 +1,21 @@
+{
+  "name": "codewincaja-db",
+  "version": "1.0.0",
+  "description": "Interface Wincaja Complemento - DB Module",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard"
+  },
+  "author": "Aldrin Gonzalez Cancino <sounix@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "debug": "^3.1.0",
+    "defaults": "^1.0.3",
+    "sequelize": "^4.31.2",
+    "tedious": "^2.1.5"
+  }
+}
