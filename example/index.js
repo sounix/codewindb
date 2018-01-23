@@ -30,11 +30,15 @@ async function run () {
 //   console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
 //   console.log(nombres)
 
-  // const nombres = await Bitacora.insertProveedor('2110C0007500000000003', '', '', '', '', '', '').catch(handleFatalError)
+  // const nombre = await Bitacora.insertProveedor('2110C0020100000000003', '', '', '', '', '', '').catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
+  // console.log(nombre)
+
+  // const nombres = await Bitacora.deleteProveedor('2110C0007500000000003').catch(handleFatalError)
   // console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
   // console.log(nombres)
 
-  const nombres = await Bitacora.deleteProveedor('2110C0007500000000003').catch(handleFatalError)
+  const nombres = await Bitacora.updateProveedor('2110C0020100000000003', 'ALDRIN GONZALEZ CANCINO', 'GOCA8108126L5', '', '', '', '').catch(handleFatalError)
   console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
   console.log(nombres)
 
