@@ -38,9 +38,39 @@ async function run () {
   // console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
   // console.log(nombres)
 
-  const nombres = await Bitacora.updateProveedor('2110C0020100000000003', 'ALDRIN GONZALEZ CANCINO', 'GOCA8108126L5', '', '', '', '').catch(handleFatalError)
+  // const nombres = await Bitacora.updateProveedor('2110C0020100000000003', 'ALDRIN GONZALEZ CANCINO', 'GOCA8108126L5', '', '', '', '').catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
+  // console.log(nombres)
+
+  // const sucursal = 'ZR'
+  // const compras = await Bitacora.findAllCompras(sucursal).catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:AllCompras]')}`)
+  // console.log(compras)
+
+  // const sucursal = 'VC'
+  // const compras = await Bitacora.findYearCompras(sucursal).catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:YearCompras]')}`)
+  // console.log(compras)
+
+  // const sucursal = 'OU'
+  // const compras = await Bitacora.findMonthCompras(sucursal).catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:YearCompras]')}`)
+  // console.log(compras)
+
+  // const sucursal = 'OU'
+  // const compras = await Bitacora.findToDayCompras(sucursal).catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:YearCompras]')}`)
+  // console.log(compras)
+
+  // const sucursal = 'OU'
+  // const folio = 'OU2015102103'
+  // const compras = await Bitacora.findByFolioCompras(sucursal, folio).catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:YearCompras]')}`)
+  // console.log(compras)
+
+  const nombre = await Bitacora.insertCompra('48622DB0-A49C-4C1C-9419-E8E88XXAC898', 'VC', '2015-11-10T12:23:12.703', 'JL2018012299', 'BIMBO SA DE CV', '612.34', '0.00', '0.00', '0.00', '612.34', 'FACT', 'A TIEMPO').catch(handleFatalError)
   console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
-  console.log(nombres)
+  console.log(nombre)
 
   process.exit(0)
 }
