@@ -9,7 +9,7 @@ const config = {
   database: process.env.DB_NAME || 'CA2015REPOSICIONES',
   username: process.env.DB_USER || 'sa',
   password: process.env.DB_PASS || 'wincaja',
-  host: process.env.DB_HOST || '192.168.123.63',
+  host: process.env.DB_HOST || '192.168.123.99',
   dialect: 'mssql',
   logging: s => debug(s),
   operatorsAliases: false
@@ -68,9 +68,22 @@ async function run () {
   // console.log(`${chalk.green('[codewincaja-db:YearCompras]')}`)
   // console.log(compras)
 
-  const nombre = await Bitacora.insertCompra('48622DB0-A49C-4C1C-9419-E8E88XXAC898', 'VC', '2015-11-10T12:23:12.703', 'JL2018012299', 'BIMBO SA DE CV', '612.34', '0.00', '0.00', '0.00', '612.34', 'FACT', 'A TIEMPO').catch(handleFatalError)
-  console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
-  console.log(nombre)
+  // const nombre = await Bitacora.insertCompra('48622DB0-A49C-4C1C-9419-E8E88XXAC898', 'VC', '2018-01-24T21:23:12.703', 'JL2018012499', 'BIMBO SA DE CV', '612.34', '0.00', '0.00', '0.00', '612.34', 'FACT', 'A TIEMPO').catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
+  // console.log(nombre)
+
+  // const nombre = await Bitacora.updateCompra('48622DB0-A49C-4C1C-9419-E8E88XXAC898', 'VC', '2018-01-24T21:23:12.703', 'JL2018012499', 'BIMBO SA DE CV', '612.34', '0.00', '0.00', '0.00', '612.34', 'FACT', 'A TIEMPO').catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
+  // console.log(nombre)
+
+  // const nombre = await Bitacora.deleteCompra('48622DB0-A49C-4C1C-9419-E8E88XXAC898', 'VC', 'JL2018012499').catch(handleFatalError)
+  // console.log(`${chalk.green('[codewincaja-db:ProveedoresNombre]')}`)
+  // console.log(nombre)
+
+  const sucursal = 'VC'
+  const folio = await Bitacora.newFolioCompra(sucursal).catch(handleFatalError)
+  console.log(`${chalk.green('[codewincaja-db:AllCompras]')}`)
+  console.log(folio)
 
   process.exit(0)
 }
